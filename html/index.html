@@ -440,9 +440,6 @@
             </div>
           </div>
         </div> <!-- End gridder -->
-        <div class="text-center wow fadeInUp">
-          <a href="javascript:void(0)" class="btn btn-theme">Load More</a>
-        </div>
       </div>
     </div> <!-- End Portfolio page -->
     
@@ -505,21 +502,21 @@
             </div>
           </div>
           <div class="col-lg-5">
-            <form class="vg-contact-form">
+            <form class="vg-contact-form" action="https://formsubmit.co/shakib6610@gmail.com" method="POST">
               <div class="form-row">
                 <div class="col-12 wow fadeInUp">
-                  <input class="form-control" type="text" name="Name" placeholder="Your Name">
+                  <input class="form-control" type="text" name="Name" id="name" placeholder="Your Name">
                 </div>
                 <div class="col-6 wow fadeInUp">
-                  <input class="form-control" type="text" name="Email" placeholder="Email Address">
+                  <input class="form-control" type="text" name="Email" id="email" placeholder="Email Address">
                 </div>
                 <div class="col-6 wow fadeInUp">
-                  <input class="form-control" type="text" name="Subject" placeholder="Subject">
+                  <input class="form-control" type="text" name="Subject" id="subject" placeholder="Subject">
                 </div>
                 <div class="col-12 wow fadeInUp">
-                  <textarea class="form-control" name="Message" rows="6" placeholder="Enter message here.."></textarea>
+                  <textarea class="form-control" name="Message" id="message" rows="6" placeholder="Enter message here.."></textarea>
                 </div>
-                <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
+                <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1" id="btn-send">Send Message</button>
               </div>
             </form>
           </div>
@@ -609,6 +606,43 @@
   <script src="../assets/js/minibar-virtual.js"></script>
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+  <!-- <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <script>
+    const btn = document.getElementById('btn-send');
+    btn.addEventListener('click', function(event){
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      const body = `name: ${name} <br/> email: ${email} <br/> subject: ${subject} <br/> ${message}`
+
+      /* Email.send({
+          Host : "smtp.gmail.com",
+          Username : "shakib6610@gmail.com",
+          Password : "xjotgaimjlmjadbe",
+          To : 'shakib6610@gmail.com',
+          From : email,
+          Subject : subject,
+          Body : body
+      }).then(
+        message => alert(message)
+      ); */
+
+      Email.send({
+    SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+    To : 'shakib6610@gmail.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    })
+  </script> -->
 
 </body>
 </html>
